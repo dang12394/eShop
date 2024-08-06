@@ -21,6 +21,6 @@ resource "azurerm_windows_web_app" "swa" {
   }
   app_settings = {
     ASPNETCORE_ENVIRONMENT = "Development",
-    UseOnlyInMemoryDatabase = "false"
+    UseOnlyInMemoryDatabase = "true"
   }
 }
