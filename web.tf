@@ -13,7 +13,10 @@ resource "azurerm_windows_web_app" "swa" {
   resource_group_name = azurerm_resource_group.swa.name
   service_plan_id = azurerm_service_plan.swa.id
   site_config {
-    windows_fx_version = "DOTNETCORE|8.0"
+    application_stack {
+      current_stack = "dotnetcore"
+      dotnet_version = "v8.0"
+    }
   }
   app_settings = {
     ASPNETCORE_ENVIRONMENT = "Development",
