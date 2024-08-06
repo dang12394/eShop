@@ -23,4 +23,9 @@ resource "azurerm_windows_web_app" "swa" {
     ASPNETCORE_ENVIRONMENT = "Development",
     UseOnlyInMemoryDatabase = "true"
   }
+  connection_string {
+    name = "catalogDB"
+    type = "SQLAzure"
+    value = output.db_string.value
+  }
 }
