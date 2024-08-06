@@ -17,6 +17,7 @@ resource "azurerm_windows_web_app" "swa" {
       current_stack = "dotnetcore"
       dotnet_version = "v8.0"
     }
+    always_on = false
   }
   app_settings = {
     ASPNETCORE_ENVIRONMENT = "Development",
