@@ -3,3 +3,7 @@ variable "DB_pwd" {
   sensitive = true
   type = string
 }
+variable "DB_connection_string" {
+  sensitive = true
+  type = string
+}

@@ -26,6 +26,6 @@ resource "azurerm_windows_web_app" "swa" {
   connection_string {
     name = "catalogDB"
     type = "SQLAzure"
-    value = output.db_string.value
+    value = var.DB_connection_string
   }
 }
